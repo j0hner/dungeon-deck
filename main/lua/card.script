@@ -1,0 +1,14 @@
+local globals = require "main.lua.modules.globals"
+
+local function flip()
+	go.animate(".", "position.x", go.PLAYBACK_ONCE_FORWARD, globals.FrontDiscardPos.x, go.EASING_INCUBIC, 1) -- move to front discard x
+	go.animate(".", "euler.y", go.PLAYBACK_ONCE_FORWARD, 180, go.EASING_LINEAR, .5, .55, function () --rotate 180 degrees
+		msg.post("controler#main", "flip done")  -- tell main this card is done flipping
+		end
+	)
+		
+end
+
+function on_message(self, message_id, message)
+	if message_id == hash("flip") then flip() end
+end

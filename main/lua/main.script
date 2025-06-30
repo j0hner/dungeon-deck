@@ -1,0 +1,52 @@
+local globals = require "main.lua.modules.globals"
+
+local frontDrawId
+local backDrawId
+
+-- front discard does not need to be tracked
+local backDiscardId
+
+local fliping = false
+
+function init(self)
+	msg.post(".", "acquire_input_focus")
+	frontDrawId = factory.create("#card", globals.FrontDrawPos) -- create front draw
+	backDrawId = factory.create("#card", globals.BackDrawPos) -- create back draw
+end
+
+--- @param action_id hash
+--- @param action table
+function on_input(self, action_id, action)
+	if (action_id == hash("flip") and not fliping) then 
+		globals.TurnCount = globals.TurnCount + 1
+		fliping = true
+		msg.post(frontDrawId, "flip") -- send the first card a flip message
+	end
+end
+
+--- @param message_id hash
+--- @param message table
+--- @param sender url
+function on_message(self, message_id, message, sender)
+	if message_id == hash("flip done") then
+		
+		if (globals.BackDrawScheduledDeletionId) then 
+			go.delete(backDiscardId) -- delete scheduled back discard if if existent
+		end
+		
+		go.set_position(globals.BackDiscardPos, frontDrawId) -- move front draw (now front discard) down
+		backDiscardId = frontDrawId -- front discard becomes back discard
+
+		globals.BackDrawScheduledDeletionId = backDiscardId -- schedule back discard for deletion
+		
+		go.set_position(globals.FrontDrawPos, backDrawId) -- move back draw up
+		frontDrawId = backDrawId -- back draw becomes front draw
+		
+		backDrawId = factory.create("#card", globals.BackDrawPos)
+
+		fliping = false
+	end
+end
+
+
+

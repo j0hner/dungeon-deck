@@ -1,0 +1,16 @@
+images {
+  image: "/assets/visuals/dung-deck-prot-bg.png"
+}
+images {
+  image: "/assets/visuals/dung-deck-prot-card-front.png"
+}
+images {
+  image: "/assets/visuals/dung-deck-prot-card-back.png"
+}
+images {
+  image: "/assets/visuals/MTG-prototype-back.jpg"
+}
+images {
+  image: "/assets/visuals/MTG-prototype-front.png"
+}
+extrude_borders: 2

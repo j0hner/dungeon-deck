@@ -1,0 +1,65 @@
+name: "main"
+scale_along_z: 0
+embedded_instances {
+  id: "bg"
+  data: "embedded_components {\n"
+  "  id: \"sprite\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"default_animation: \\\"dung-deck-prot-bg\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "textures {\\n"
+  "  sampler: \\\"texture_sampler\\\"\\n"
+  "  texture: \\\"/assets/visuals/assets.atlas\\\"\\n"
+  "}\\n"
+  "\"\n"
+  "}\n"
+  ""
+  position {
+    z: -1000.0
+  }
+  scale3 {
+    x: 1.936155
+    y: 2.388199
+    z: -1.767006
+  }
+}
+embedded_instances {
+  id: "camholder"
+  data: "embedded_components {\n"
+  "  id: \"camera\"\n"
+  "  type: \"camera\"\n"
+  "  data: \"aspect_ratio: 1.0\\n"
+  "fov: 0.7854\\n"
+  "near_z: 0.1\\n"
+  "far_z: 10000.0\\n"
+  "orthographic_projection: 1\\n"
+  "orthographic_zoom: 0.3\\n"
+  "\"\n"
+  "}\n"
+  ""
+  position {
+    z: 1282.0
+  }
+  scale3 {
+    x: 17.410486
+    y: 6.9
+    z: -0.891625
+  }
+}
+embedded_instances {
+  id: "controler"
+  data: "components {\n"
+  "  id: \"main\"\n"
+  "  component: \"/main/lua/main.script\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"card\"\n"
+  "  type: \"factory\"\n"
+  "  data: \"prototype: \\\"/assets/card.go\\\"\\n"
+  "\"\n"
+  "}\n"
+  ""
+  position {
+    z: 4701.0
+  }
+}
