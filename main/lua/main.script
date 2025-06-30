@@ -45,8 +45,8 @@ function on_message(self, message_id, message, sender)
 		backDrawId = factory.create("#card", globals.BackDrawPos)
 
 		fliping = false
+	elseif message_id == hash("card action") then
+		
 	end
+
 end
-
-
-

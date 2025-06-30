@@ -1,16 +1,39 @@
-local M = {}
+TurnCount = 0
 
-M.TurnCount = 0
+BackDrawPos = vmath.vector3(-602, 0, -300)
+FrontDrawPos = vmath.vector3(-602, 0, 0)
+BackDiscardPos = vmath.vector3(650, 0, -300)
+FrontDiscardPos = vmath.vector3(650, 0, 0)
 
-M.BackDrawPos = vmath.vector3(-602, 0, -300)
-M.FrontDrawPos = vmath.vector3(-602, 0, 0)
-M.BackDiscardPos = vmath.vector3(650, 0, -300)
-M.FrontDiscardPos = vmath.vector3(650, 0, 0)
+BackDrawScheduledDeletionId = nil
 
-M.BackDrawScheduledDeletionId = nil
+CardTypes = {
+    "Exit",
+    "Monster",
+    "Loot",
+    "Treasure",
+    "Final"
+}
 
-function M.Increment()
-    M.value = M.value + 1
-end
-
-return M
+EnemyTypes = {
+    {
+        "rat",
+        "poison gas",
+        "rougue hound",
+        "pit fall",
+        "boulder trap"
+    },
+    {
+        "weak goblin",
+        "skeleton archer",
+        "undead soldier",
+        "restless ghoul",
+        "carnivorous slime",
+        "pack of rats"
+    },
+    {
+        "goblin mercenary",
+        "undead knight",
+        ""
+    }
+}
