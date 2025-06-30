@@ -46,7 +46,7 @@
 2. **Drow Bladesinger** – Deadly spellblade with teleport strikes.
 3. **Hellknight Exile** – Fallen paladin wielding hellfire.
 4. **Chimera Spawn** – Twisted beast with multiple heads and breath weapons.
-5. **Necroscourg**e – Lich’s servant that corrupts magic.
+5. **Necroscourge** – Lich’s servant that corrupts magic.
 6. **Drider Huntress** – Half-drow, half-spider ranger.
 7. **Bog Titan** – Mud-covered giant with earthshaking blows.
 8. **Mirror Stalker** – Entity that moves through reflections.
@@ -60,7 +60,7 @@
 3. **Avatar of Malice** – Manifestation of pure hatred and war.
 4. **Void Horror** – Eldritch terror that bends reality.
 5. **Flameforged Juggernaut** – Titan of steel and living fire.
-6. **Time-Bound Warde**n – Temporal enforcer that loops attacks.
+6. **Time-Bound Warden** – Temporal enforcer that loops attacks.
 7. **Queen of Screams** – Banshee queen with voice that ruptures minds.
 8. **Black Star Spawn** – Alien being from the far realm.
 9. **Harbinger of the End** – Cult-born prophet with cataclysmic powers.
